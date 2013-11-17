@@ -56,6 +56,13 @@
         },
         {
             "type": "shell",
+            "scripts": [
+                "scripts/upgrade.sh"
+            ],
+            "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
+        },
+        {
+            "type": "shell",
             "script": "scripts/fusion.sh",
             "override": {
                 "virtualbox": {
